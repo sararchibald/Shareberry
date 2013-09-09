@@ -1,0 +1,15 @@
+<%= form_for @collection do |f| %>
+<h1>Update <%= @collection.name%> </h1>
+
+
+    <div id="form">
+      <%= f.label :name, "Collection Name" %>
+      <%= f.text_field :name %>
+
+      <%= f.label :private, "Make this collection public?" %>
+      <%= f.check_box :private %>
+
+      <%= f.submit "Update " %>
+    </div>
+<% end %>
+

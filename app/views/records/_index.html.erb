@@ -1,0 +1,17 @@
+
+
+<%= link_to '<span class="icon-plus"> Add Book</span>'.html_safe, new_record_path, :class => "btn btn-primary btn-group btn-group-sm"  %>
+<br><br>
+
+
+
+
+  <% @record.each do |record| %>
+    <div>
+      <%= link_to '<span class="icon-trash"></span>'.html_safe , record, method: :delete, data: { confirm: 'Are you sure?' }, :class => "btn btn-default" %>
+      <%= record.title.capitalize %>
+    </div>
+  <% end %>
+
+
+

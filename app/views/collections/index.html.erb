@@ -1,0 +1,18 @@
+<h2>My Libraries</h2>
+<%= link_to '<span class="icon-plus"> Add Library</span>'.html_safe, new_collection_path, :class => "btn btn-primary btn-group btn-group-sm"  %>
+
+
+<% @collection.each do |collection| %>
+<div class="clearfix ">
+  <div class="btn-group">
+
+      <%= link_to '<span class="icon-gear"></span>'.html_safe, edit_collection_path(collection), :class => "btn btn-default" %>
+      <%= link_to '<span class="icon-trash"></span>'.html_safe , collection, method: :delete, data: { confirm: 'Are you sure?' }, :class => "btn btn-default" %>
+  </div>
+  <%= link_to collection.name, collection, :class => "btn" %>
+</div>
+<% end %>
+
+
+
+

@@ -1,0 +1,10 @@
+<%= form_tag("/search", method: "get") do %>
+
+    <%= label_tag(:t, "Title") %>
+    <%= text_field_tag(:t) %>
+
+    <%= label_tag(:a, "Author") %>
+    <%= text_field_tag(:a) %>
+
+    <%= submit_tag("Search") %>
+<% end %>

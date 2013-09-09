@@ -1,0 +1,21 @@
+<div id="header">
+
+
+  <div class="page-header clearfix ">
+
+    <%=link_to 'My Libraries', root_path, :class => "btn btn-default pull-right" %>
+
+    <% if user_signed_in? %>
+        <%= link_to 'Log Out', destroy_user_session_path,:method => :delete, :class => "btn btn-default pull-right" %>
+    <% else %>
+        <%= link_to 'Log In', new_user_session_path, :class => "btn btn-default pull-right" %>
+    <% end %>
+
+    <h2><%= link_to 'SHAREBERRY', root_path %></h2>
+
+
+
+
+  </div>
+
+</div>
